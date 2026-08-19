@@ -16,5 +16,5 @@ test('successful login', async ({ page }) => {
 });
 
 test('user is redirected to inventory page after login', async ({ page }) =>{
-    await expect(page).toHaveURL('/inventory\.html/');
+    await expect(page).toHaveURL('/inventory\.html');
 });
