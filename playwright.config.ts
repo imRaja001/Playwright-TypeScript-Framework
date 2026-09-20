@@ -1,4 +1,5 @@
 import { defineConfig, devices } from '@playwright/test';
+import { qaConfig } from './config/environments/qa';
 
 /**
  * Read environment variables from file.
@@ -29,6 +30,7 @@ export default defineConfig({
     // baseURL: 'http://localhost:3000',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
+     baseURL: qaConfig.baseURL,
     trace: 'on-first-retry',
   },
 
